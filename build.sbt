@@ -11,3 +11,12 @@ lazy val chapter02 = project
     libraryDependencies ++= Seq(
         "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
         "ch.qos.logback" % "logback-classic" % LogbackVersion))
+
+lazy val chapter03 = project
+  .in(file("chapter03"))
+  .settings(
+    scalaVersion := ScalaVersion,
+    scalafmtOnCompile := true,
+    libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
+      "ch.qos.logback" % "logback-classic" % LogbackVersion))
