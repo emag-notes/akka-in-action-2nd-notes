@@ -1,6 +1,6 @@
 val ScalaVersion = "2.13.10"
-val AkkaVersion = "2.7.0"
-val LogbackVersion = "1.2.3"
+val AkkaVersion = "2.8.0"
+val LogbackVersion = "1.4.6"
 val ScalaTest = "3.2.15"
 
 lazy val chapter02 = project
@@ -31,3 +31,14 @@ lazy val chapter04 = project
         "ch.qos.logback" % "logback-classic" % LogbackVersion,
         "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion % Test,
         "org.scalatest" %% "scalatest" % ScalaTest % Test))
+
+lazy val chapter05 = project
+  .in(file("chapter05"))
+  .settings(
+    scalaVersion := ScalaVersion,
+    scalafmtOnCompile := true,
+    libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
+      "ch.qos.logback" % "logback-classic" % LogbackVersion,
+      "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion % Test,
+      "org.scalatest" %% "scalatest" % ScalaTest % Test))
