@@ -1,7 +1,7 @@
-val ScalaVersion = "2.13.10"
-val AkkaVersion = "2.8.0"
-val LogbackVersion = "1.4.6"
-val ScalaTest = "3.2.15"
+val ScalaVersion = "2.13.11"
+val AkkaVersion = "2.8.2"
+val LogbackVersion = "1.4.8"
+val ScalaTest = "3.2.16"
 
 lazy val chapter02 = project
   .in(file("chapter02"))
